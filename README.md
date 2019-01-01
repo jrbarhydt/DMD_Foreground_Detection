@@ -193,6 +193,7 @@ video matrix to extract a foreground. Ultimately, the implementation of
 the DMD method is very straightforward.
 
 > <img src="media/image4.png" width="248" height="139"><img src="media/image2.png" width="250" height="142">
+
 > <img src="media/image39.png" width="251" height="140"><img src="media/image49.png" width="254" height="140">
 
 > **Figure 3. Results of DMD Foreground Detection on 'Easy' Video at Frame
@@ -241,6 +242,7 @@ results as Figure 3, but rather analyzing the 'hard' video. Frame 275
 was chosen for comparison following the same logic as before.
 
 > <img src="media/image7.png" width="252" height="143"><img src="media/image34.png" width="251" height="142">
+
 > <img src="media/image26.png" width="253" height="142"><img src="media/image11.png" width="253" height="142">
 
 > **Figure 5. Results of DMD Foreground Detection on 'Hard' Video at Frame
