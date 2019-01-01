@@ -1,5 +1,5 @@
 **Dynamic Mode Decomposition (DMD) for Foreground 
-Detection in Video**
+Detection in Video - MATLAB**
 ========================================
 
 by J. Barhydt<sup>1</sup>
