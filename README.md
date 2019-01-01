@@ -1,4 +1,5 @@
-**Dynamic Mode Decomposition (DMD) for Foreground Detection in Video  **
+**Dynamic Mode Decomposition (DMD) for Foreground 
+Detection in Video**
 ========================================
 
 by J. Barhydt<sup>1</sup>
