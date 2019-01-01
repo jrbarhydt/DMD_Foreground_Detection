@@ -123,15 +123,13 @@ of the data, the eigenvalues, <img src="media/image10.png" width="8" height="11"
 exponentials, via Equation 6, which can be rewritten in terms of <img src="media/image31.png" width="8" height="7">
 .
 
-> [![](C:\Users\Johnathon\Documents\media/media/image23.png){width="0.5833333333333334in"
-> height="0.1527777777777778in"}](about:blank) (6)
+> <img src="media/image23.png" width="58" height="15"> (6)
 
 It is from these terms that the DMD time-dynamics are contained, and
 thus determines how each mode is affected in time. Then, the dynamics of
 the basis mode, U, is given by the sum over all basis states, or
 
-> [![](C:\Users\Johnathon\Documents\media/media/image16.png){width="1.0833333333333333in"
-> height="0.1527777777777778in"}](about:blank) (7)
+> <img src="media/image16.png" width="108" height="15"> (7)
 
 where
 [![](C:\Users\Johnathon\Documents\media/media/image19.png){width="0.1388888888888889in"
