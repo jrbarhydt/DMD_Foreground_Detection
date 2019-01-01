@@ -131,22 +131,17 @@ the basis mode, U, is given by the sum over all basis states, or
 
 > <img src="media/image16.png" width="108" height="15"> (7)
 
-where
-[![](C:\Users\Johnathon\Documents\media/media/image19.png){width="0.1388888888888889in"
-height="0.125in"}](about:blank) is a diagonal matrix of the
-[![](C:\Users\Johnathon\Documents\media/media/image6.png){width="0.20833333333333334in"
-height="0.125in"}](about:blank) terms and
-[![](C:\Users\Johnathon\Documents\media/media/image46.png){width="8.333333333333333e-2in"
-height="9.722222222222222e-2in"}](about:blank) comes from the boundary
-condition determined by
-[![](C:\Users\Johnathon\Documents\media/media/image48.png){width="0.3888888888888889in"
-height="0.1527777777777778in"}](about:blank), where
-[![](C:\Users\Johnathon\Documents\media/media/image40.png){width="0.125in"
-height="8.333333333333333e-2in"}](about:blank) is the first SVD basis
+where <img src="media/image19.png" width="14" height="13">
+ is a diagonal matrix of the <img src="media/image6.png" width="21" height="13">
+ terms and <img src="media/image46.png" width="8" height="9">
+ comes from the boundary
+condition determined by <img src="media/image48.png" width="39" height="15">
+, where <img src="media/image40.png" width="13" height="8">
+ is the first SVD basis
 mode. Finally, the background separation comes from the fact that the
 low rank modes (background) have small changes in time, and thus their
-[![](C:\Users\Johnathon\Documents\media/media/image36.png){width="0.1388888888888889in"
-height="0.125in"}](about:blank) terms are much smaller in magnitude. It
+<img src="media/image36.png" width="14" height="13">
+ terms are much smaller in magnitude. It
 should also be noted that by 'pulling out' these low rank modes, the
 remaining values are make up the sparse information in the video. Since
 the sparse values are not part of the background detection, this
@@ -155,24 +150,19 @@ resolved. Furthermore, only the absolute value of the low-rank DMD modes
 are taken, to eliminate possible negative pixel values (which are not
 allowed in pixel space). These values are also absorbed into that sparse
 representation, thus preserving
-.![](C:\Users\Johnathon\Documents\media/media/image17.png){width="1.75in"
-height="0.1527777777777778in"}
+.<img src="media/image17.png" width="175" height="15">
 
-![](C:\Users\Johnathon\Documents\media/media/image3.png){width="2.7083333333333335in"
-height="2.0412073490813647in"}![](C:\Users\Johnathon\Documents\media/media/image43.png){width="2.6965966754155732in"
-height="2.0677088801399823in"}
+> <img src="media/image3.png" width="271" height="204"><img src="media/image43.png" width="270" height="207">
 
-**Figure 1. (left) Normalized Spectrum (log-scale) of Original Data SVD
-Modes. (right) Plot of Exponential Eigenvalues and Unit Circle in
-Complex Plane.**
+> **Figure 1. (left) Normalized Spectrum (log-scale) of Original Data SVD
+> Modes. (right) Plot of Exponential Eigenvalues and Unit Circle in
+> Complex Plane.**
 
-![](C:\Users\Johnathon\Documents\media/media/image47.png){width="2.6162160979877513in"
-height="1.984375546806649in"}![](C:\Users\Johnathon\Documents\media/media/image30.png){width="2.6803291776027995in"
-height="2.0052088801399823in"}
+> <img src="media/image47.png" width="262" height="198"><img src="media/image30.png" width="268" height="201">
 
-**Figure 2. (left) Real and Imaginary Components of Time-Dynamics of the
-first Mode (left) and Minimum Oscillation Mode(right) showing Amplitude
-over the first 50 Frames.**
+> **Figure 2. (left) Real and Imaginary Components of Time-Dynamics of the
+> first Mode (left) and Minimum Oscillation Mode(right) showing Amplitude
+> over the first 50 Frames.**
 
 
 
@@ -190,9 +180,8 @@ is lost, and the number of frames is adjusted accordingly. SVD
 decomposition, along with calculation of the components of S follow
 exactly from Equation 5. Again, the time dynamics follow Equations 6 and
 7 directly, where the timestep is set as 1 (since the space between each
-frame is identical in time.) Thus
-[![](C:\Users\Johnathon\Documents\media/media/image32.png){width="0.4027777777777778in"
-height="0.125in"}](about:blank) becomes the 'background' whose absolute
+frame is identical in time.) Thus <img src="media/image32.png" width="40" height="13">
+ becomes the 'background' whose absolute
 value is subtracted from each frame after normalization. The
 normalization simply follows from subtracting the minimum value of the
 background, BG, by the BG itself and then dividing by the range in BG.
@@ -203,26 +192,21 @@ filters are returned, they can be utilized raw, or multiplied by the
 video matrix to extract a foreground. Ultimately, the implementation of
 the DMD method is very straightforward.
 
-![](C:\Users\Johnathon\Documents\media/media/image4.png){width="2.4791666666666665in"
-height="1.3875174978127733in"}![](C:\Users\Johnathon\Documents\media/media/image2.png){width="2.5in"
-height="1.4166666666666667in"}![](C:\Users\Johnathon\Documents\media/media/image39.png){width="2.5104166666666665in"
-height="1.3958333333333333in"}![](C:\Users\Johnathon\Documents\media/media/image49.png){width="2.5416666666666665in"
-height="1.3958333333333333in"}
+> <img src="media/image4.png" width="248" height="139"><img src="media/image2.png" width="250" height="142">
+> <img src="media/image39.png" width="251" height="140"><img src="media/image49.png" width="254" height="140">
 
-**Figure 3. Results of DMD Foreground Detection on 'Easy' Video at Frame
-39. **
+> **Figure 3. Results of DMD Foreground Detection on 'Easy' Video at Frame
+> 39. **
 
-**(top left) Original Frame (top right) Low-Rank Background **
+> **(top left) Original Frame (top right) Low-Rank Background **
 
-**(bottom left) Foreground Detection (bottom right) Foreground Filtered
-From Original**
+> **(bottom left) Foreground Detection (bottom right) Foreground Filtered
+> From Original**
 
-![](C:\Users\Johnathon\Documents\media/media/image33.png){width="2.5208333333333335in"
-height="1.4166666666666667in"}![](C:\Users\Johnathon\Documents\media/media/image20.png){width="2.5052088801399823in"
-height="1.4166666666666667in"}
+> <img src="media/image33.png" width="252" height="142"><img src="media/image20.png" width="251" height="142">
 
-**Figure 4. DMD Background Comparison Between First (left) and Last
-(right) Frames of 'Hard' Video.**
+> **Figure 4. DMD Background Comparison Between First (left) and Last
+> (right) Frames of 'Hard' Video.**
 
 
 # Computational Results
@@ -236,13 +220,10 @@ modes, and thusly has much of the spatial information enclosed.
 Furthermore, the oscillatory eigenvalues are plotted on the right of
 Figure 1, showing that most modes are neither damping or growing, since
 their absolute values are less than 1. To compare oscillation rate of
-various modes,
-[![](C:\Users\Johnathon\Documents\media/media/image18.png){width="0.25in"
-height="0.125in"}](about:blank) is shown for both the first mode
-[![](C:\Users\Johnathon\Documents\media/media/image12.png){width="0.1388888888888889in"
-height="8.333333333333333e-2in"}](about:blank) and the measured minimum
-[![](C:\Users\Johnathon\Documents\media/media/image21.png){width="0.3055555555555556in"
-height="8.333333333333333e-2in"}](about:blank) over the first 50 frames
+various modes, <img src="media/image18.png" width="25" height="13">
+ is shown for both the first mode <img src="media/image12.png" width="14" height="8">
+ and the measured minimum <img src="media/image21.png" width="31" height="8">
+ over the first 50 frames
 of the 'hard' video. These low frequency modes dominate the 'background
 space' since they change little over time.
 
@@ -259,26 +240,21 @@ background changes and 'flow' with them. Figure 5 represents the same
 results as Figure 3, but rather analyzing the 'hard' video. Frame 275
 was chosen for comparison following the same logic as before.
 
-![](C:\Users\Johnathon\Documents\media/media/image7.png){width="2.5208333333333335in"
-height="1.4270833333333333in"}![](C:\Users\Johnathon\Documents\media/media/image34.png){width="2.5104166666666665in"
-height="1.4166666666666667in"}![](C:\Users\Johnathon\Documents\media/media/image26.png){width="2.53125in"
-height="1.4270833333333333in"}![](C:\Users\Johnathon\Documents\media/media/image11.png){width="2.53125in"
-height="1.4270833333333333in"}
+> <img src="media/image7.png" width="252" height="143"><img src="media/image34.png" width="251" height="142">
+> <img src="media/image26.png" width="253" height="142"><img src="media/image11.png" width="253" height="142">
 
-**Figure 5. Results of DMD Foreground Detection on 'Hard' Video at Frame
-39. **
+> **Figure 5. Results of DMD Foreground Detection on 'Hard' Video at Frame
+> 39. **
 
-**(top left) Original Frame (top right) Low-Rank Background **
+> **(top left) Original Frame (top right) Low-Rank Background **
 
-**(bottom left) Foreground Detection (bottom right) Foreground Filtered
-From Original**
+> **(bottom left) Foreground Detection (bottom right) Foreground Filtered
+> From Original**
 
-![](C:\Users\Johnathon\Documents\media/media/image26.png){width="2.53125in"
-height="1.4270833333333333in"}![](C:\Users\Johnathon\Documents\media/media/image25.png){width="2.5104166666666665in"
-height="1.4166666666666667in"}
+> <img src="media/image26.png" width="253" height="142"><img src="media/image25.png" width="251" height="142">
 
-**Figure 5. Comparison Between DMD Background (left) and SVD Background
-(right)**
+> **Figure 5. Comparison Between DMD Background (left) and SVD Background
+> (right)**
 
 Finally, comparing the DMD foreground detection with SVD (with its
 static low-rank approximation) is shown in Figure 6, where it can be
@@ -439,7 +415,6 @@ end
 \% Background/Foreground Separation via Dynamic Mode Decomposition
 (DMD)\
 % Johnathon R Barhydt\
-% AMATH 482 HW4\
 %\
 % This code takes a video and uses the DMD modes with the smallest\
 % time-variance to determine background, from which a foreground
